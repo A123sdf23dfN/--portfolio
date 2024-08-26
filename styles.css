@@ -1,0 +1,437 @@
+/* Global Styles */
+body {
+    margin: 0;
+    background: #000;
+    color: #f0f8ff;
+    overflow-x: hidden;
+    font-family: "Dancing Script", cursive;
+}
+
+
+#scroll-space {
+    height: 2000px;
+    /* Enough space to scroll */
+}
+
+canvas {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    pointer-events: none;
+}
+
+/* Navbar */
+.navbar {
+    padding: 0px 0;
+    font-family: "Edu VIC WA NT Beginner", cursive;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+
+    /* Added semi-transparent background */
+}
+
+.navbar nav {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    max-width: 1200px;
+}
+
+.left {
+    float: left;
+}
+
+.navbar-toggle {
+    display: none;
+    background-color: transparent;
+    border: none;
+    color: #b49191;
+    font-size: 2rem;
+    cursor: pointer;
+}
+
+.right {
+    float: right;
+    margin-top: 34px;
+}
+
+.left h1 {
+    font-size: 3.5rem;
+    margin-top: 16px;
+    background: linear-gradient(145deg, skyblue, blue);
+    -webkit-background-clip: text;
+    color: transparent;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+}
+
+.nav-link {
+    color: #ffc600;
+    text-decoration: none;
+    margin: 20px 20px;
+    font-family: "Edu VIC WA NT Beginner", cursive;
+    font-size: 1.2rem;
+    font-weight: bold;
+
+    transition: color 0.3s ease, transform 0.3s ease, text-decoration 0.3s ease;
+    position: relative;
+}
+
+.nav-link::after {
+    content: '';
+    display: block;
+    width: 0;
+    height: 2px;
+    background: #ff00b7;
+    transition: width 0.3s;
+    position: absolute;
+    bottom: -5px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.nav-link:hover {
+    color: #ff4500;
+    transform: scale(1.1);
+}
+
+.nav-link:hover::after {
+    width: 100%;
+}
+
+/* Hero Section */
+.hero {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: #ffadad;
+    background-attachment: fixed;
+    padding: 0 20px;
+    opacity: 0;
+    animation: fadeIn 3s forwards;
+}
+
+.hero span {
+    font-size: 4.5rem;
+    margin: 0;
+    background: linear-gradient(145deg, blue, rgba(173, 216, 230, 0.8), purple, #ff00b7);
+    -webkit-background-clip: text;
+    color: transparent;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+}
+
+.hero h1 {
+    font-size: 4.5rem;
+    margin: 0;
+    background: linear-gradient(145deg, skyblue, blue);
+    -webkit-background-clip: text;
+    color: transparent;
+}
+
+.hero h2 {
+    font-size: 2.5rem;
+    margin: 20px 0 0;
+    font-family: "Edu VIC WA NT Beginner", cursive;
+    white-space: nowrap;
+    color: #ffc600;
+    overflow: hidden;
+    border-right: 3px solid #ffc600;
+    width: 0;
+    animation: typing 4s steps(30, end) infinite, blink 0.75s step-end infinite;
+}
+
+/* Keyframes for Typing Effect */
+@keyframes typing {
+    from {
+        width: 0;
+    }
+
+    to {
+        width: 28%;
+    }
+}
+
+/* Keyframes for Blink Effect */
+@keyframes blink {
+    0% {
+        border-color: transparent;
+    }
+
+    50% {
+        border-color: #ffc600;
+    }
+
+    100% {
+        border-color: transparent;
+    }
+}
+
+/* Keyframes for Fade In */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-100px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Keyframes for Fade In Up */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* About Section */
+.border-container-a {
+    background-image: linear-gradient(163deg, #00ff75 0%, #3700ff 100%);
+    border-radius: 20px;
+    transition: all 0.3s;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 70%;
+    margin: auto;
+    height: 600px;
+}
+
+#about {
+    width: 95%;
+    height: 92%;
+    position: relative;
+    /* Required for positioning the pseudo-elements */
+    color: #00ff75;
+    /* Black background for the #about section */
+    padding: 20px;
+    /* Add some padding to prevent text from touching the border */
+    border-radius: 10px;
+    margin: auto;
+    background-color: #000;
+    transition: all 0.2s;
+    border-radius: 20px;
+    /* Rounded corners */
+
+    /* To prevent pseudo-element overflow */
+}
+
+#about h2 {
+    color: #ffadad;
+    text-align: center;
+    font-size: 3.5rem;
+    margin-bottom: 20px;
+}
+
+#about div {
+    max-width: 800px;
+    margin: 0 auto;
+    line-height: 2;
+    font-size: 18px;
+}
+
+
+
+/* Skills Section */
+.section-skills {
+    padding: 20px 20px;
+    text-align: center;
+    margin: auto;
+    width: 1200px;
+    opacity: 0;
+    animation: fadeInUp 1.5s forwards;
+}
+
+.section-title {
+    color: blue;
+    font-size: 3.5rem;
+    margin-bottom: 40px;
+    padding-bottom: 10px;
+}
+
+.skill:hover {
+    cursor: pointer;
+    transform: scale(1.1);
+    transition: transform 0.3s ease-in-out;
+}
+
+/* Skill cards container and animations */
+.skills-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+}
+
+.border-container {
+    position: relative;
+    padding: 5px;
+    border-radius: 15px;
+    overflow: hidden;
+}
+
+/* Horizontal scroll container */
+.skills-scroll {
+    overflow-x: auto;
+    white-space: nowrap;
+    scroll-behavior: smooth;
+    padding-bottom: 20px;
+    /* Adjust the padding for better spacing */
+}
+
+.skills-container {
+    display: inline-flex;
+    gap: 20px;
+}
+
+.border-container {
+    display: inline-block;
+    min-width: 250px;
+    transition: transform 0.3s ease-in-out;
+}
+
+.border-container:hover {
+    transform: scale(1.1);
+    /* Zoom effect on hover */
+}
+
+/* Skill Card */
+.skill {
+    position: relative;
+    padding: 20px;
+    background-color: #000;
+    border-radius: 15px;
+    transition: all 0.3s ease-in;
+    text-align: center;
+    color: #ffc600;
+    width: 250px;
+    height: 150px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.skill-icon {
+    color: #ffc600;
+    font-size: 2.5rem;
+}
+
+.border-container {
+    position: relative;
+    overflow: hidden;
+    /* Ensures the glow effect doesn’t overflow the container */
+}
+
+.border-container::after,
+.border-container::before {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-image: conic-gradient(#ffadad, BLUE, #00ff75, #ffadad);
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    transition: all 3s ease-in;
+    z-index: -1;
+    border-radius: 10px;
+    box-shadow: 0 0 15px rgba(255, 255, 255, 0.8),
+        /* White glow */
+        0 0 30px rgba(255, 0, 255, 0.5);
+    /* Pinkish glow */
+}
+
+
+
+.border-container::before {
+    filter: blur(10px);
+}
+
+/* Contact Section */
+.section-contact {
+    padding: 10px 10px;
+    margin-top: 20px;
+    text-align: center;
+    margin: auto;
+    margin-top: 134px;
+    width: 600px;
+    opacity: 0;
+    animation: fadeInUp 1.5s forwards;
+    border: none;
+    font-family: "Oswald", sans-serif;
+    border-radius: 15px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+    background: transparent;
+    color: #ffffff;
+}
+
+.section-contact h2 {
+    color: #ffadad;
+    font-size: 3.5rem;
+    margin-bottom: 20px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.contact-links {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
+}
+
+.social-link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #ffc600;
+    text-decoration: none;
+    font-size: 2.5rem;
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.social-link:hover {
+    color: #ffdd57;
+    transform: scale(1.15);
+}
+
+/* Optional: Adding subtle transition to the section */
+.section-contact {
+    transition: background 0.5s ease, box-shadow 0.5s ease;
+}
+
+
+
+/* Footer */
+footer {
+    padding: 20px 0;
+    text-align: center;
+    color: #f0f8ff;
+    background: rgba(0, 0, 0, 0.7);
+    font-family: "Oswald", sans-serif;
+    box-shadow: 0 -4px 8px rgba(0, 0, 0, 0.5);
+}
+
+footer p {
+    margin: 0;
+}
+
+span {
+    margin-left: 14px;
+}

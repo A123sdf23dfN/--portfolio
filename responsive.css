@@ -1,0 +1,153 @@
+@media (max-width: 1325px) {
+    .hero {
+        margin-top: 23px;
+    }
+}
+
+@media (max-width: 1225px) {
+    .border-container-a {
+        background: transparent;
+    }
+
+    .left h1 {
+        margin-top: 3px;
+        margin-left: 13px;
+    }
+}
+
+@media (max-width: 980px) {
+    .hero {
+        margin-top: 29px;
+    }
+}
+
+@media (max-width: 822px) {
+    .hero {
+        align-items: center;
+        margin: auto;
+    }
+}
+
+@media (max-width: 850px) {
+    .navbar {
+        padding: 10px 0;
+    }
+
+    .left h1 {
+        font-size: 2.5rem;
+        margin-top: 35px;
+        margin-left: 23px;
+    }
+
+    .navbar-toggle {
+        display: block;
+    }
+
+    .nav-link {
+        font-size: 1rem;
+        margin: 10px;
+    }
+
+    .hero {
+        margin-top: 34px;
+    }
+
+    .hero span {
+        font-size: 2.5rem;
+    }
+
+    .hero h1 {
+        font-size: 3rem;
+    }
+
+    .hero h2 {
+        font-size: 1.5rem;
+    }
+
+    .border-container-a {
+        width: 90%;
+        margin: auto;
+        height: auto;
+    }
+
+    #about {
+        width: 100%;
+        padding: 15px;
+        width: auto;
+        height: auto;
+        border: 2px solid #00ff75;
+    }
+
+    #about h2 {
+        font-size: 2rem;
+    }
+
+    #about div {
+        font-size: 16px;
+    }
+
+    .section-skills {
+        width: 95%;
+
+    }
+
+    .border-container::after,
+    .border-container::before {
+        display: none;
+    }
+
+    .section-title {
+        font-size: 2.5rem;
+    }
+
+    .skills-container {
+        flex-direction: column;
+
+    }
+
+    .skill {
+        width: auto;
+        height: auto;
+        border: 2px solid #ffc600;
+
+    }
+
+    .section-contact {
+        width: 95%;
+        padding: 20px;
+        margin-top: 20px;
+    }
+
+    .section-contact h2 {
+        font-size: 2rem;
+    }
+
+    .contact-links {
+        flex-direction: column;
+    }
+}
+
+@media (max-width: 400px) {
+    .navbar {
+        padding: 10px 0;
+    }
+
+    .left h1 {
+        font-size: 2rem;
+    }
+
+    .navbar-toggle {
+        display: block;
+        font-size: 1.5rem;
+    }
+
+    .right {
+        display: none;
+        /* Hide the right side links for very small screens */
+    }
+
+    .nav-link {
+        font-size: 1rem;
+        margin: 10px;
+    }
+}
